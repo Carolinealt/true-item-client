@@ -1,6 +1,8 @@
 import { NavLink, Route, Routes } from "react-router-dom";
-import css from "./App.css";
+import css from "./App.module.css";
 import clsx from "clsx";
+import Home from "./pages/Home/Home";
+import TasksPage from "./pages/TasksPage/TasksPage";
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
@@ -20,8 +22,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tasks" element={<Tasks />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/tasks" element={<TasksPage />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>
   );
