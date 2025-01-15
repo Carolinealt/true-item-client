@@ -19,22 +19,25 @@ export const Task = ({ task }) => {
 
   return (
     <div className={css.wrapper}>
-      <label htmlFor={checkId}>
-        <input
-          type="checkbox"
-          id={checkId}
-          className={css.checkbox}
-          checked={task.completed}
-          onChange={handleToggle}
-        />
-        <span className={css.containerCheckbox}>
-          <HiCheck className={css.checkIcon} />
-        </span>
-      </label>
+      <div className={css.btnContainer}>
+        <label htmlFor={checkId}>
+          <input
+            type="checkbox"
+            id={checkId}
+            className={css.checkbox}
+            checked={task.completed}
+            onChange={handleToggle}
+          />
+          <span className={css.containerCheckbox}>
+            <HiCheck className={css.checkIcon} />
+          </span>
+        </label>
 
-      <Button variant="small" onClick={handleDelete} position="absolute">
-        <RiDeleteBin5Fill size={20}/>
-      </Button>
+        <Button variant="small" onClick={handleDelete} position="absolute">
+          <RiDeleteBin5Fill size={20} />
+        </Button>
+      </div>
+
 
       <div className={css.textContainer}>
         <p className={css.text}>{task.text}</p>
