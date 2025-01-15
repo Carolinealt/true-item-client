@@ -36,6 +36,8 @@ export const deleteTask = createAsyncThunk(
   "tasks/deleteTask",
   async (taskId, thunkAPI) => {
     try {
+      console.log(taskId);
+      
       const response = await axios.delete(`/tasks/${taskId}`);
       return response.data;
     } catch (e) {
@@ -75,8 +77,6 @@ export const toggleCompleted = createAsyncThunk(
       const response = await axios.patch(`/tasks/${task._id}`, {
         completed: !task.completed,
       });
-      console.log(response.data.data);
-
       return response.data.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 export const Task = ({ task }) => {
   const dispatch = useDispatch();
 
-  const handleDelete = () => dispatch(deleteTask(task.id));
+  const handleDelete = () => dispatch(deleteTask(task._id));
 
   const handleToggle = () => dispatch(toggleCompleted(task));
 

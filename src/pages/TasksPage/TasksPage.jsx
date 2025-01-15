@@ -3,6 +3,7 @@ import css from "./TasksPage.module.css";
 import { useEffect } from "react";
 import { fetchTasks } from "../../redux/operations";
 import { TaskList } from "../../components/TaskList/TaskList";
+import TaskForm from "../../components/TaskForm/TaskForm";
 const TasksPage = () => {
   const dispatch = useDispatch();
 
@@ -16,6 +17,7 @@ const TasksPage = () => {
     <div>
       {isLoading && <p>Loading tasks...</p>}
       {error && <p>{error}</p>}
+      <TaskForm />
       <TaskList tasks={items} />
     </div>
   );
