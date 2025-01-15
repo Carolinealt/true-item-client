@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import css from "./Home.module.css";
+import LinksList from "../../components/LinksList/LinksList";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
       </section>
 
       <section className={css.sectionForm}>
-
+        <LinksList />
 
       </section>
     </div>

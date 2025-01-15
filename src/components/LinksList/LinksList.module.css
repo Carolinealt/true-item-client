@@ -1,0 +1,41 @@
+.linksContainer {
+    background-color: var(--primary-color);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.item {
+    width: calc((100-80px)/5);
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(11, 83, 146);
+}
+
+.icons {
+    font-size: 30px;
+    color: rgb(11, 83, 146);
+}
+
+.link:hover {
+    color: var(--secondary-color);
+}
