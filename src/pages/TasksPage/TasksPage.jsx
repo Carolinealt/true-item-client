@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { fetchTasks } from "../../redux/operations";
 import { TaskList } from "../../components/TaskList/TaskList";
 import TaskForm from "../../components/TaskForm/TaskForm";
+import ErrorDisplay from "../../components/ErrorDisplay/ErrorDisplay";
 const TasksPage = () => {
   const dispatch = useDispatch();
 
@@ -14,9 +15,9 @@ const TasksPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={css.TasksPageContainer}>
       {isLoading && <p>Loading tasks...</p>}
-      {error && <p>{error}</p>}
+      {error && <ErrorDisplay message={error} />}
       <TaskForm />
       <TaskList tasks={items} />
     </div>

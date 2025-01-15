@@ -2,7 +2,9 @@
   --primary-color: rgb(110, 209, 188);
   --secondary-color: rgb(3, 115, 91);
   --font-size: 25px;
-  --tranzition-property: 250ms ease-in-out
+  --tranzition-property: 250ms ease-in-out;
+  color: var(--secondary-color);
+
 }
 
 #root {
