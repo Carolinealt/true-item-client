@@ -3,26 +3,43 @@
 }
 
 .wrapper {
-    position: relative;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 15px;
     font-size: 13px;
     height: 200px;
     word-break: break-word;
-    overflow-y: auto
+    overflow-y: auto;
+    word-wrap: break-word;
+    /* Переносить слова при необходимости */
+    word-break: break-word;
+
+}
+
+.textContainer {
+    overflow-y: auto;
+
+
 }
 
 .dateContainer {
     text-align: right;
     position: absolute;
-    bottom: 5px;
-    right: 10px;
+    bottom: 0px;
+    right: 0;
+    /* right: 10px; */
+    padding-right: 10px;
+    padding-bottom: 10px;
+    line-height: 1;
+    width: 50%;
 }
 
 .date {
     font-size: 10px;
-    color: rgb(87, 87, 87);
+    padding: 3px;
+    background-color: white;
+
+    color: rgb(47, 47, 47);
 }
 
 .containerCheckbox {

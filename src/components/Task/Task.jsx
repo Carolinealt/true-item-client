@@ -29,11 +29,14 @@ export const Task = ({ task }) => {
         <span className={css.containerCheckbox}>
           <HiCheck className={css.checkIcon} />
         </span>
-
-
       </label>
+
       <Button variant="small" onClick={handleDelete} position="absolute"></Button>
-      <p className={css.text}>{task.text}</p>
+
+      <div className={css.textContainer}>
+        <p className={css.text}>{task.text}</p>
+      </div>
+
       <div className={css.dateContainer}>
         <span className={css.date}>{time} </span>
         <br />
