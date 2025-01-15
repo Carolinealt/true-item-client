@@ -3,8 +3,9 @@ import css from "./Task.module.css";
 import { deleteTask, toggleCompleted } from "../../redux/operations";
 import Button from "../Button/Button";
 import dateParser from "../../utils/dateParser";
-import { HiCheck } from "react-icons/hi";
+import { HiCheck, } from "react-icons/hi";
 import { useId } from "react";
+import { RiDeleteBin5Fill } from "react-icons/ri";
 
 export const Task = ({ task }) => {
   const { time, date } = dateParser(task.updatedAt)
@@ -31,7 +32,9 @@ export const Task = ({ task }) => {
         </span>
       </label>
 
-      <Button variant="small" onClick={handleDelete} position="absolute"></Button>
+      <Button variant="small" onClick={handleDelete} position="absolute">
+        <RiDeleteBin5Fill size={20}/>
+      </Button>
 
       <div className={css.textContainer}>
         <p className={css.text}>{task.text}</p>

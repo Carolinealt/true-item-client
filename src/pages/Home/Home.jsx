@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import TaskForm from "../../components/TaskForm/TaskForm";
 import css from "./Home.module.css";
 
 const Home = () => {
@@ -14,7 +13,9 @@ const Home = () => {
             Your assistant during your work and education
           </p>
 
-          <NavLink to="/tasks"><Button variant="main">Go to my tasks list</Button></NavLink>
+          <Button variant="main" styles=''>Go to my tasks list</Button>
+
+          <NavLink to="/tasks"><Button variant="main" styles=''>Go to my tasks list</Button></NavLink>
 
         </div>
       </section>
