@@ -21,7 +21,6 @@ const Home = () => {
 
       <section className={css.sectionForm}>
         <LinksList />
-
       </section>
     </div>
   );

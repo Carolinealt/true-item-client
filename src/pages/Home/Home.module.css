@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
+
 }
 
 .hero {}
@@ -15,12 +17,13 @@
 
 .heroHeader {
     color: white;
-    font-size: 37px;
+    font-size: 27px;
     background-color: var(--primary-color);
-    padding: 30px;
-    margin: 10px;
-    width: 100%;
+    padding: 10px 0;
+    margin: 0;
     text-align: center;
+    width: 100%;
+
 }
 
 .desc {
