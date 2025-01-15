@@ -20,10 +20,13 @@ export const Task = ({ task }) => {
         checked={task.completed}
         onChange={handleToggle}
       />
-        <Button variant="small" onClick={handleDelete}></Button>
+      <Button variant="small" onClick={handleDelete}></Button>
       <p className={css.text}>{task.text}</p>
-      <span>{time}</span>
-      <span>{date}</span>
+      <div className={css.dateContainer}>
+        <span className={css.date}>{time} </span>
+        <br />
+        <span className={css.date}>{date}</span>
+      </div>
     </div>
   );
 };
