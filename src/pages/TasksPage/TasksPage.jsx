@@ -17,8 +17,7 @@ const TasksPage = () => {
 
   return (
     <div className={css.TasksPageContainer}>
-      {/* <Loader>Loading tasks...</Loader> */}
-      {/* {isLoading && <Loader>Loading tasks...</Loader>} */}
+      {isLoading && <Loader>Loading tasks...</Loader>}
       {error && <ErrorDisplay message={error} />}
       <TaskForm />
       <TaskList tasks={items} />

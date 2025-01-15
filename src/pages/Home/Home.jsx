@@ -13,8 +13,6 @@ const Home = () => {
             Your assistant during your work and education
           </p>
 
-          <Button variant="main" styles=''>Go to my tasks list</Button>
-
           <NavLink to="/tasks"><Button variant="main" styles=''>Go to my tasks list</Button></NavLink>
 
         </div>

@@ -16,7 +16,10 @@
 
 .nav {
   display: flex;
-  gap: 4px;
+  justify-content: center;
+  gap: 10px;
+  font-size: 23px;
+  margin: auto;
 }
 
 .link {
