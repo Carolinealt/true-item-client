@@ -3,10 +3,12 @@
 }
 
 .wrapper {
+    position: relative;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 15px;
-
+    font-size: 13px;
+    height: 200px;
 }
 
 .dateContainer {
@@ -16,4 +18,7 @@
 .date {
     font-size: 10px;
     color: rgb(87, 87, 87);
+}
+
+.deleteBtn {
 }

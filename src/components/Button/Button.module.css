@@ -23,5 +23,11 @@
     composes: button;
     width: 30px;
     height: 30px;
-    display: inline-block;
+}
+
+.absolute {
+    composes: button;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
