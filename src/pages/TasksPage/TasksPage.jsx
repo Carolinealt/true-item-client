@@ -16,7 +16,7 @@ const TasksPage = () => {
     <div>
       {isLoading && <p>Loading tasks...</p>}
       {error && <p>{error}</p>}
-      <TaskList />
+      <TaskList tasks={items} />
     </div>
   );
 };
