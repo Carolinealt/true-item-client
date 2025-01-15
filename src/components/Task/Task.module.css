@@ -13,6 +13,9 @@
 
 .dateContainer {
     text-align: right;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
 }
 
 .date {
@@ -20,5 +23,30 @@
     color: rgb(87, 87, 87);
 }
 
-.deleteBtn {
+.containerCheckbox {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 42%;
+    color: transparent;
+
+    transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms;
+}
+
+.containerCheckbox:hover,
+.containerCheckbox:focus {
+    background-color: #daffff;
+}
+
+.checkIcon {}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked+.containerCheckbox {
+    color: #27aa99;
 }
