@@ -16,19 +16,22 @@ const TaskForm = () => {
 
   return (
     <Formik initialValues={{ text: "" }} onSubmit={handleSubmit}>
-      <Form>
-        <label htmlFor={textFieldId}>Text</label>
-        <Field
-          as="textarea"
-          cols="20"
-          rows="5"
-          name="text"
-          id={textFieldId}
-          className={css.input}
-        />
+      <Form className={css.form}>
+        <div className={css.textAreaContainer}>
+          <label htmlFor={textFieldId}>My new task is</label>
+          <Field
+            as="textarea"
+            cols="10"
+            rows="2"
+            name="text"
+            id={textFieldId}
+            className={css.input}
+          />
 
-        <Button type="submit" variant="main">
-          Submit
+        </div>
+
+        <Button type="submit" variant="main" >
+          Add
         </Button>
       </Form>
     </Formik>

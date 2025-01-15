@@ -5,6 +5,7 @@ import { fetchTasks } from "../../redux/operations";
 import { TaskList } from "../../components/TaskList/TaskList";
 import TaskForm from "../../components/TaskForm/TaskForm";
 import ErrorDisplay from "../../components/ErrorDisplay/ErrorDisplay";
+import Loader from "../../components/Loader/Loader";
 const TasksPage = () => {
   const dispatch = useDispatch();
 
@@ -16,7 +17,8 @@ const TasksPage = () => {
 
   return (
     <div className={css.TasksPageContainer}>
-      {isLoading && <p>Loading tasks...</p>}
+      {/* <Loader>Loading tasks...</Loader> */}
+      {/* {isLoading && <Loader>Loading tasks...</Loader>} */}
       {error && <ErrorDisplay message={error} />}
       <TaskForm />
       <TaskList tasks={items} />

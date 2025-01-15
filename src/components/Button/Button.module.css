@@ -4,7 +4,8 @@
     border-radius: 10px;
     font-size: var(--font-size);
     color: white;
-    width: 200px;
+    max-width: 200px;
+    height: 50px;
     background-color: var(--primary-color);
 
 }

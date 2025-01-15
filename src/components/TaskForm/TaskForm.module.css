@@ -1,12 +1,23 @@
+.form {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.textAreaContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .input {
     padding: 40px 15px;
-    margin: 10px;
     border-radius: 20px;
     font-size: var(--font-size);
     outline: none;
     transition: border var(--tranzition-property);
-    width: 100%;
     max-width: 500px;
+    flex-grow: 1;
+    font-size: 15px;
 }
 
 .input:hover,
