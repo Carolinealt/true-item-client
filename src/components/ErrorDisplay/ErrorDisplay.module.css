@@ -1,0 +1,10 @@
+.errorContainer {
+    text-align: center;
+    border: 1px solid brown;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.message {
+    color: brown;
+}

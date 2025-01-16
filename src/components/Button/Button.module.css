@@ -4,7 +4,7 @@
     border-radius: 10px;
     font-size: var(--font-size);
     color: white;
-    width: 200px;
+    max-width: 200px;
     background-color: var(--primary-color);
 
 }
@@ -13,14 +13,21 @@
     composes: button;
 }
 
-.main:hover,
-.main:focus {
+.button:hover,
+.button:focus {
     border: 1px solid rgb(0, 160, 125);
 }
 
 .small {
     composes: button;
+    padding: 0;
     width: 30px;
     height: 30px;
-    display: inline-block;
+}
+
+.absolute {
+    composes: button;
+    position: absolute;
+    right: 0;
+    top: 10px;
 }

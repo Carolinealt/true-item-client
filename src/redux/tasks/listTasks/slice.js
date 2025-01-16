@@ -43,11 +43,11 @@ export const tasksSlice = createSlice({
       .addCase(addTask.rejected, handleRejected)
 
       .addCase(deleteTask.pending, handlePending)
-      .addCase(deleteTask.fulfilled, (state, action) => {
+      .addCase(deleteTask.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
         state.items = state.items.filter(
-          (task) => task.id !== action.payload.id
+          (task) => task._id !== payload._id
         );
       })
       .addCase(deleteTask.rejected, handleRejected)
@@ -74,11 +74,12 @@ export const tasksSlice = createSlice({
       .addCase(patchTask.rejected, handleRejected)
 
       .addCase(toggleCompleted.pending, handlePending)
-      .addCase(toggleCompleted.fulfilled, (state, action) => {
+      .addCase(toggleCompleted.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
-        state.items = state.items.map((task) =>
-          task.id === action.payload.id ? action.payload : task
+        state.items = state.items.map((task) => {
+          return task._id === payload._id ? payload : task;
+        }
         );
       })
       .addCase(toggleCompleted.rejected, handleRejected);

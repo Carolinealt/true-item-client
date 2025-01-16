@@ -6,5 +6,63 @@
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 15px;
-    
+    font-size: 13px;
+    height: 200px;
+    word-break: break-word;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+.btnContainer {
+    height: 15px;
+    margin-bottom: 5px;
+}
+
+.textContainer {
+    overflow-y: auto;
+}
+
+.dateContainer {
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    line-height: 1;
+    width: 50%;
+}
+
+.date {
+    font-size: 10px;
+    padding: 3px;
+    background-color: white;
+    color: rgb(47, 47, 47);
+}
+
+.containerCheckbox {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 42%;
+    color: transparent;
+    background-color: white;
+    transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms;
+}
+
+.containerCheckbox:hover,
+.containerCheckbox:focus {
+    background-color: #daffff;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked+.containerCheckbox {
+    color: #27aa99;
 }

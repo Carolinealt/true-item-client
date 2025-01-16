@@ -2,7 +2,9 @@
   --primary-color: rgb(110, 209, 188);
   --secondary-color: rgb(3, 115, 91);
   --font-size: 25px;
-  --tranzition-property: 250ms ease-in-out
+  --tranzition-property: 250ms ease-in-out;
+  color: var(--secondary-color);
+
 }
 
 #root {
@@ -14,19 +16,22 @@
 
 .nav {
   display: flex;
-  gap: 4px;
+  justify-content: center;
+  gap: 10px;
+  font-size: 23px;
+  margin: auto;
 }
 
 .link {
-  color: white;
+  color: rgb(24, 189, 195);
   text-decoration: none;
 }
 
 .link:hover {
   text-decoration: underline;
-  color: white;
+  color: rgb(8, 60, 62);
 }
 
 .active {
-  color: orange;
+  color: rgb(8, 60, 62);
 }
